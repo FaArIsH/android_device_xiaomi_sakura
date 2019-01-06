@@ -46,21 +46,8 @@ vendor/lib/libremosaic_daemon.so
 vendor/lib/libvidhance.so
 vendor/lib/libvidhance_gyro.so
 
-vendor/bin/mm-qcamera-app
-vendor/lib/hw/camera.msm8953.so
-vendor/lib/libmm-qcamera.so
-lib/libmorpho_memory_allocator.so:vendor/lib/libmorpho_memory_allocator.so
-lib64/libmorpho_memory_allocator.so:vendor/lib64/libmorpho_memory_allocator.so
-lib/libmorpho_panorama.so:vendor/lib/libmorpho_panorama.so
-lib64/libmorpho_panorama.so:vendor/lib64/libmorpho_panorama.so
-vendor/lib/libarcsoft_beautyshot.so
 vendor/lib/libarcsoft_dualcam_refocus.so
 vendor/lib/libarcsoft_high_dynamic_range.so
-lib/libmorpho_panorama_gp.so:vendor/lib/libmorpho_panorama_gp.so
-lib64/libmorpho_panorama_gp.so:vendor/lib64/libmorpho_panorama_gp.so
-vendor/lib/libFaceGrade.so
-vendor/lib/libmmjpeg_interface.so
-vendor/lib/libqomx_core.so
 vendor/lib/lib_lowlight.so
 vendor/lib/libXMFD_AgeGender.so
 lib/libdualcameraddm.so:vendor/lib/libdualcameraddm.so
@@ -1529,7 +1516,6 @@ vendor/lib/libmmcamera_imx298.so
 vendor/lib/libmmcamera_imx318.so
 vendor/lib/libmmcamera_imx362.so
 vendor/lib/libmmcamera_imx378.so
-vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmcamera_isp_abf40.so
 vendor/lib/libmmcamera_isp_bcc40.so
 vendor/lib/libmmcamera_isp_be_stats44.so

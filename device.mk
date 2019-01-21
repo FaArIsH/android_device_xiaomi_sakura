@@ -104,7 +104,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=true \
-    persist.vendor.bt.enable.splita2dp=false \
+    persist.vendor.btstack.enable.splita2dp=false \
     ro.vendor.audio.sdk.fluencetype=fluence \
     ro.vendor.audio.sdk.ssr=false \
     vendor.audio.flac.sw.decoder.24bit=true \
@@ -139,9 +139,6 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     tinymix
 
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
-
 # Audio configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
@@ -163,20 +160,19 @@ PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 # Camera
-PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service \
-    vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor
-
 PRODUCT_PROPERTY_OVERRIDES += \
+    camera.display.lmax=1280x720 \
+    camera.display.umax=1920x1080 \
+    camera.hal1.packagelist=com.skype.raider,com.google.android.talk \
+    camera.lowpower.record.enable=1 \
     media.camera.ts.monotonic=1 \
+    persist.camera.gyro.disable=0 \
+    persist.camera.isp.clock.optmz=0 \
+    persist.camera.stats.test=5 \
+    persist.vendor.qti.telephony.vt_cam_interface=1 \
+    vidc.enc.dcvs.extra-buff-count=2 \
     persist.camera.HAL3.enabled=1 \
-    persist.camera.gyro.android=1 \
-    persist.camera.is_type=1 \
-    vendor.vidc.enc.dcvs.extra-buff-count=2 \
-    vendor.vidc.enc.disable.pq=true \
-    camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.mokee.snap
 
 PRODUCT_PACKAGES += \
     Snap
